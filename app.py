@@ -18,7 +18,7 @@ model = BartForConditionalGeneration.from_pretrained(model_path)
 
 # Download and unzip the model
 gdown.download(model_url, output_path, quiet=False)
-!unzip headline-generator-model.zip -d headline-generator-model/
+!unzip headline-generator.zip -d headline-generator/
 
 # Title
 st.title("Headline Generator")
