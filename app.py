@@ -16,6 +16,10 @@ model_path = "https://drive.google.com/drive/folders/12ERv3Tl22Ukici91HH0Lp5qw8y
 tokenizer = BartTokenizer.from_pretrained(model_path)
 model = BartForConditionalGeneration.from_pretrained(model_path)
 
+# Download and unzip the model
+gdown.download(model_url, output_path, quiet=False)
+!unzip headline-generator-model.zip -d headline-generator-model/
+
 # Title
 st.title("Headline Generator")
 
